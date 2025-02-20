@@ -3,6 +3,8 @@ import { AuthProvider } from "./context/AuthContext";
 import RegisterForm from "./components/RegisterForm";
 import LoginForm from "./components/LoginForm";
 import LogoutButton from "./components/LogoutButton";
+import QuizDetail from "./components/QuizDetail";
+import QuizList from "./components/QuizList";
 
 const Home = () => {
   return (
@@ -21,6 +23,8 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/register" element={<RegisterForm />} />
           <Route path="/login" element={<LoginForm />} />
+          <Route path="/quiz/:id" element={<QuizDetail />} />
+          <Route path="/quiz" element={<QuizList />} />
         </Routes>
       </Router>
     </AuthProvider>
